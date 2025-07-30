@@ -124,14 +124,14 @@ target_link_libraries(${PROJECT_NAME}
   ${trajectory_msgs_TARGETS}
   ${ur_msgs_TARGETS}
   ${action_msgs_TARGETS}
-  angles::angles
+  angles
   controller_interface
-  joint_trajectory_controller::joint_trajectory_controller
-  pluginlib::pluginlib
-  rclcpp_lifecycle::rclcpp_lifecycle
-  rcutils::rcutils
-  realtime_tools::realtime_tools
-  tf2_ros::tf2_ros
+  joint_trajectory_controller
+  pluginlib
+  rclcpp_lifecycle
+  rcutils
+  realtime_tools
+  tf2_ros
 )
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
@@ -180,16 +180,16 @@ if(BUILD_TESTING)
   )
   target_link_libraries(test_load_force_mode_controller
     ${PROJECT_NAME}
-    controller_manager::controller_manager
-    ros2_control_test_assets::ros2_control_test_assets
+    controller_manager
+    ros2_control_test_assets
   )
   ament_add_gmock(test_load_freedrive_mode_controller
     test/test_load_freedrive_mode_controller.cpp
   )
   target_link_libraries(test_load_freedrive_mode_controller
     ${PROJECT_NAME}
-    controller_manager::controller_manager
-    ros2_control_test_assets::ros2_control_test_assets
+    controller_manager
+    ros2_control_test_assets
   )
 endif()
 
