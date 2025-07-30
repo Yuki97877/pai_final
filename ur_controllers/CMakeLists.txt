@@ -125,7 +125,7 @@ target_link_libraries(${PROJECT_NAME}
   ${ur_msgs_TARGETS}
   ${action_msgs_TARGETS}
   angles::angles
-  controller_interface::controller_interface
+  controller_interface
   joint_trajectory_controller::joint_trajectory_controller
   pluginlib::pluginlib
   rclcpp_lifecycle::rclcpp_lifecycle
